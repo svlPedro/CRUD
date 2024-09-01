@@ -15,10 +15,10 @@ public class ConnectionFactory {
 	
 	public static Connection createConnection() throws SQLException, ClassNotFoundException {
 		  return DriverManager.getConnection(URL, USERNAME, PASSWORD);
+		  //atualizei o driver, não sendo mais necessário as linhas de codigo para carregar o driver
 	}
 	
-	public static void main(String[] args) throws ClassNotFoundException, SQLException {
-		
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {	
 		 try {
 	            Connection con = createConnection();
 	            if (con != null) {
