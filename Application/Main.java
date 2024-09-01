@@ -8,18 +8,25 @@ import Models.DAO.Conferente_DAO;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SQLException, ClassNotFoundException {
 		
 		//primeiro teste
-		Conferente wendell = new Conferente("Wendell");
+		//Conferente wendell = new Conferente("Wendell");
 		
 		Conferente_DAO confDao = new Conferente_DAO();
 		
+		for(Conferente conf : confDao.showConferente()) {
+			System.out.println("Conferente: "+conf.getName());
+		}
+		//for each para imprimir os conferentes
+		//saida:
+		/*
+		 * Conferente: Ari
+		 * Conferente: Elton
+ 		 * Conferente: João Batista
+		 * Conferente: Lobo
+		 * Conferente: Luiz
+		 */
 		
-		try {
-			confDao.removeConferente(wendell);
-		} catch (ClassNotFoundException i) {
-			i.printStackTrace();
-		}//teste de remoção bem sucedido.
 	}
 }
