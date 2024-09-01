@@ -13,13 +13,11 @@ public class Processo {
 		
 	}
 	
-	public Processo(int id, String contractor, int pages, int companys, String lecturer, int points) {
-		this.id = id;
+	public Processo(String contractor, int pages, int companys, String lecturer) {
 		this.contractor = contractor;
 		this.pages = pages;
 		this.companys = companys;
 		this.lecturer = lecturer;
-		this.points = points;
 	}
 
 	public int getId() {

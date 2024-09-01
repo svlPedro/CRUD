@@ -91,7 +91,7 @@ public class Conferente_DAO {
 		}
 	
 	public void removeConferente(Conferente conferente) throws ClassNotFoundException {
-		String sql = "DELETE FROM Conferente WHERE nome = (?)";
+		String sql = "DELETE Conferente WHERE nome = (?)";
 		
 		Connection conn = null;
 		PreparedStatement ps = null;
